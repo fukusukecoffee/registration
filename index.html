@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FUKUSUKE COFFEE 新規会員登録フォーム</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/validate.css">
+
+</head>
+<body>
+    <div class="main">
+        <section class="signup">
+            <div class="container">
+                <div class="signup-content">
+                    <form method="POST" id="signup-form" class="signup-form">
+                        <h2 class="form-title">FUKUSUKE COFFEE</h2>
+                        <center><h3 class="form-title">新規会員登録フォーム</h3></center>
+
+                        <div class="form-group">
+                            <label>【姓】</label>
+                            <input type="text" class="form-input" name="family_name" id="family_name" placeholder="桜井" onfocus="this.placeholder = ''" onblur="this.placeholder = '桜井'"/>
+                        </div>
+                        <div class="form-group">
+                            <label>【名】</label>
+                            <input type="text" class="form-input" name="given_name" id="given_name" placeholder="福助" onfocus="this.placeholder = ''" onblur="this.placeholder = '福助'"/>
+                        </div>
+                        <div class="form-group">
+                            <label>【おなまえ】(ひらがなフルネーム)</label>
+                            <input type="text" class="form-input" name="nickname" id="nickname" placeholder="さくらいふくすけ" onfocus="this.placeholder = ''" onblur="this.placeholder = 'さくらいふくすけ'"/>
+                        </div>
+                        <div class="form-group">
+                            <label>【郵便番号】</label>
+                            <input type="text" class="form-input" name="postal_code" id="postal_code" placeholder="4441162" onfocus="this.placeholder = ''" onblur="this.placeholder = '4441162'" onKeyUp="AjaxZip3.zip2addr(this,'','locality','administrative_district_level_1');"/>
+                        </div>
+                        <div class="form-group">
+                            <label>【都道府県】</label>
+                            <input type="text" class="form-input" name="locality" id="locality" placeholder="愛知県" onfocus="this.placeholder = ''" onblur="this.placeholder = '愛知県'"/>
+                        </div>
+                        <div class="form-group">
+                            <label>【以下ご住所】</label>
+                            <input type="text" class="form-input" name="administrative_district_level_1" id="administrative_district_level_1" placeholder="以下ご住所" onfocus="this.placeholder = ''" onblur="this.placeholder = '以下ご住所'"/>
+                        </div>
+                        <div class="form-group">
+                            <label>【お電話番号】</label>
+                            <input type="text" class="form-input" name="phone_number" id="phone_number" placeholder="09012345678" onfocus="this.placeholder = ''" onblur="this.placeholder = '09012345678'"/>
+                        </div>
+                        <div class="form-group">
+                            <label>【お誕生日】(お誕生日月にお得なDMをお送りします！)</label>
+                            <input type="date" class="form-input" name="birthday" id="birthday" placeholder="【お誕生日】"/>
+                        </div>
+                        <center><p>以下のプライバシーポリシーに<br>同意されたら<br>登録するボタンを押してください。</p></center>
+                        <iframe src="https://fukusukecoffee.com/privacy-policy/" width="100%" height="400"></iframe>
+                        <div class="form-group">
+                            <input type="submit" name="submit" id="submit" class="form-submit" value="登録する"/>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/jquery/jquery.validate.min.js"></script>
+    <script src="vendor/jquery/additional-methods.min.js"></script>
+    <script type="text/javascript" src="vendor/jquery/messages_ja.min.js"></script>
+    <script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
+
+    <script src="js/function.js"></script>
+</body>
+</html>
